@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Logout</title> 
+</head>
+
+<body>
+    logging out...
+
+    <script>
+       // Function to delete a cookie by name
+function deleteCookie(cookieName) {
+    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+
+// Function to handle logout
+function logout() {
+    // Delete the jwtToken cookie
+    deleteCookie('jwtToken');
+
+    // Redirect to the login page
+    window.location.href = '/login'; // Replace '/login' with the actual login page URL
+}
+logout()    
+    </script>
+
+</body>
+
+</html>
